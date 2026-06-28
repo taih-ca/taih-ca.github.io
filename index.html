@@ -13,7 +13,6 @@ title: Home
   </div>
   <div class="hero__inner">
     <div class="hero__text">
-      <p class="hero__eyebrow">University of Calgary</p>
       <h1 class="hero__title">
         Transdisciplinary<br>
         <span class="hero__title-accent">Artificial Intelligence Hub</span>
@@ -24,8 +23,8 @@ title: Home
         researchers, students, and industry partners together.
       </p>
       <div class="hero__actions">
-        <a class="btn btn--primary" href="#research">Explore our research</a>
-        <a class="btn btn--ghost" href="{{ site.links.website }}" target="_blank" rel="noopener">Join the Hub ↗</a>
+        <a class="btn btn--primary" href="#about">Explore the Hub</a>
+        <a class="btn btn--ghost" href="{{ '/join/' | relative_url }}">Join the Hub</a>
       </div>
     </div>
     <div class="hero__mark">
@@ -34,18 +33,6 @@ title: Home
   </div>
 </section>
 
-<!-- ===================== NEWS / BANNER ===================== -->
-{% if site.data.news and site.data.news.size > 0 %}
-{% assign latest = site.data.news.first %}
-<aside class="banner">
-  <div class="banner__inner">
-    <span class="banner__pill">{{ latest.date }}</span>
-    <p class="banner__text"><strong>{{ latest.title }}</strong> — {{ latest.description }}</p>
-    {% if latest.link != "" %}<a class="banner__link" href="{{ latest.link }}" target="_blank" rel="noopener">{{ latest.cta | default: "Learn more" }} ↗</a>{% endif %}
-  </div>
-</aside>
-{% endif %}
-
 <!-- ===================== ABOUT ===================== -->
 <section class="section" id="about">
   <div class="container">
@@ -53,46 +40,69 @@ title: Home
       <span class="section__kicker">About</span>
       <h2 class="section__title">An inclusive home for AI at UCalgary</h2>
     </div>
-    <div class="about__grid">
-      <div class="about__lead">
-        <p>
-          The Transdisciplinary Artificial Intelligence Hub (TAIH) is a
-          collaborative research initiative dedicated to advancing
-          interdisciplinary AI to address complex societal and technological
-          challenges. We unite researchers, students, and industry partners to
-          drive high-impact innovation.
-        </p>
-        <p>
-          The Hub fosters an inclusive and collaborative space where members
-          from <strong>all faculties</strong> can contribute, connect, and
-          facilitate AI research — bringing together experts in engineering,
-          medicine, and the social implications of AI to create inclusive and
-          implementable work.
-        </p>
-      </div>
-      <ul class="about__stats">
-        <li><span class="stat__num">5</span><span class="stat__label">Research themes</span></li>
-        <li><span class="stat__num">4</span><span class="stat__label">Founding directors</span></li>
-        <li><span class="stat__num">All</span><span class="stat__label">Faculties welcome</span></li>
-      </ul>
+    <div class="about__lead">
+      <p>
+        The Transdisciplinary Artificial Intelligence Hub (TAIH) is a
+        collaborative research initiative dedicated to advancing
+        interdisciplinary AI to address complex societal and technological
+        challenges. We unite researchers, students, and industry partners to
+        drive high-impact innovation.
+      </p>
+      <p>
+        The Hub fosters an inclusive and collaborative space where members
+        from <strong>all faculties</strong> can contribute, connect, and
+        facilitate AI research — bringing together experts in engineering,
+        medicine, and the social implications of AI to create inclusive and
+        implementable work.
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ===================== RESEARCH ===================== -->
-<section class="section section--alt" id="research">
+<!-- ===================== NEWS ===================== -->
+<section class="section section--alt" id="news">
   <div class="container">
     <div class="section__head">
-      <span class="section__kicker">Research</span>
-      <h2 class="section__title">Flagship directions</h2>
-      <p class="section__sub">Where transdisciplinary teams are making an impact.</p>
+      <span class="section__kicker">News</span>
+      <h2 class="section__title">Latest news</h2>
+      <p class="section__sub">Announcements and upcoming events from the Hub.</p>
     </div>
-    <div class="grid grid--research">
-      {% for theme in site.data.research %}
-      <article class="card card--research card--{{ theme.color }}">
-        <span class="card__glyph" aria-hidden="true">{{ theme.icon }}</span>
-        <h3 class="card__title">{{ theme.title }}</h3>
-        <p class="card__body">{{ theme.description }}</p>
+    <div class="news-list">
+      {% for item in site.data.news %}
+      <article class="news-item">
+        <div class="news-item__date">{{ item.date }}</div>
+        <div class="news-item__body">
+          <h3 class="news-item__title">{{ item.title }}</h3>
+          <p class="news-item__desc">{{ item.description }}</p>
+          {% if item.link != "" %}
+          <a class="news-item__cta" href="{{ item.link }}" target="_blank" rel="noopener">{{ item.cta | default: "Read more" }} ↗</a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEAM ===================== -->
+<section class="section" id="team">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__kicker">Team</span>
+      <h2 class="section__title">Founding board</h2>
+      <p class="section__sub">The directors who lead the Hub.</p>
+    </div>
+    <div class="grid grid--team">
+      {% for person in site.data.team.directors %}
+      {% assign parts = person.name | split: " " %}
+      <article class="card card--person">
+        <div class="person__avatar" aria-hidden="true">{% if person.photo %}<img class="person__photo" src="{{ person.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</div>
+        <h3 class="person__name">
+          {% if person.link != "" %}<a href="{{ person.link }}" target="_blank" rel="noopener">{{ person.name }} ↗</a>{% else %}{{ person.name }}{% endif %}
+        </h3>
+        <p class="person__role">{{ person.role }}</p>
+        <p class="person__focus">{{ person.focus }}</p>
+        <p class="person__aff">{{ person.affiliation }}</p>
       </article>
       {% endfor %}
     </div>
@@ -100,7 +110,7 @@ title: Home
 </section>
 
 <!-- ===================== EVENTS ===================== -->
-<section class="section" id="events">
+<section class="section section--alt" id="events">
   <div class="container">
     <div class="section__head">
       <span class="section__kicker">Events</span>
@@ -113,31 +123,6 @@ title: Home
         <div class="card__meta">{{ event.format }}</div>
         <h3 class="card__title">{{ event.title }}</h3>
         <p class="card__body">{{ event.description }}</p>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- ===================== TEAM ===================== -->
-<section class="section section--alt" id="team">
-  <div class="container">
-    <div class="section__head">
-      <span class="section__kicker">Team</span>
-      <h2 class="section__title">Founding board</h2>
-      <p class="section__sub">The directors who lead the Hub.</p>
-    </div>
-    <div class="grid grid--team">
-      {% for person in site.data.team.directors %}
-      {% assign parts = person.name | split: " " %}
-      <article class="card card--person">
-        <div class="person__avatar" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>
-        <h3 class="person__name">
-          {% if person.link != "" %}<a href="{{ person.link }}" target="_blank" rel="noopener">{{ person.name }} ↗</a>{% else %}{{ person.name }}{% endif %}
-        </h3>
-        <p class="person__role">{{ person.role }}</p>
-        <p class="person__focus">{{ person.focus }}</p>
-        <p class="person__aff">{{ person.affiliation }}</p>
       </article>
       {% endfor %}
     </div>

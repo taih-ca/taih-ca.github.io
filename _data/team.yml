@@ -1,24 +1,28 @@
 # Founding board of the Transdisciplinary AI Hub
 directors:
   - name: Samira Ebrahimi Kahou
+    photo: /images/samira-kahou.jpg
     role: Founder & Director
     affiliation: University of Calgary
     focus: Machine learning &amp; deep learning
     link: ""
 
   - name: Mahdis Bisheban
+    photo: /images/mahdis-bisheban.jpg
     role: Founder & Co-Director
     affiliation: University of Calgary
     focus: Robotics, control &amp; autonomy
     link: ""
 
   - name: Steve Drew
+    photo: /images/steve-drew.jpeg
     role: Founder & Co-Director
     affiliation: University of Calgary
     focus: Distributed &amp; federated learning
     link: ""
 
   - name: Mostafa Farrokhabadi
+    photo: /images/mostafa-farrokhabadi.jpg
     role: Founder & Co-Director
     affiliation: University of Calgary
     focus: AI for power &amp; energy systems
