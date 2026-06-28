@@ -1,0 +1,35 @@
+# Research themes — TAIH flagship directions
+- title: Human Dynamics in a Changing World
+  icon: "◳"
+  color: crimson
+  description: >-
+    Modeling human interactions and behaviour to support evidence-based policy
+    development and decision-making in complex, rapidly changing environments.
+
+- title: Reimagining the Energy Landscape
+  icon: "◆"
+  color: orange
+  description: >-
+    AI-driven innovations that redefine how sustainable energy infrastructure
+    and electrical grids are modeled, planned, and operated.
+
+- title: New Earth & Space Technologies
+  icon: "▲"
+  color: black
+  description: >-
+    Applying AI to satellite imagery analysis, autonomous space robotics, and
+    space mission planning for Earth observation and exploration.
+
+- title: Engineering Solutions for Health
+  icon: "✚"
+  color: crimson
+  description: >-
+    Advancing AI for biomedical diagnostics, personalized medicine, and the
+    equitable integration of artificial intelligence into healthcare.
+
+- title: Transdisciplinary Research
+  icon: "⬡"
+  color: orange
+  description: >-
+    The core of the Hub — uniting experts in engineering, medicine, and the
+    social implications of AI to create inclusive, implementable research.

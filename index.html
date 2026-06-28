@@ -1,0 +1,167 @@
+---
+layout: default
+title: Home
+---
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="shard shard--tan"></span>
+    <span class="shard shard--crimson"></span>
+    <span class="shard shard--orange"></span>
+    <span class="shard shard--black"></span>
+  </div>
+  <div class="hero__inner">
+    <div class="hero__text">
+      <p class="hero__eyebrow">University of Calgary</p>
+      <h1 class="hero__title">
+        Transdisciplinary<br>
+        <span class="hero__title-accent">Artificial Intelligence Hub</span>
+      </h1>
+      <p class="hero__lead">
+        A collaborative research initiative advancing interdisciplinary AI to
+        address complex societal and technological challenges — bringing
+        researchers, students, and industry partners together.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#research">Explore our research</a>
+        <a class="btn btn--ghost" href="{{ site.links.website }}" target="_blank" rel="noopener">Join the Hub ↗</a>
+      </div>
+    </div>
+    <div class="hero__mark">
+      <img src="{{ '/assets/img/taih-mark.png' | relative_url }}" alt="TAIH emblem">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWS / BANNER ===================== -->
+{% if site.data.news and site.data.news.size > 0 %}
+{% assign latest = site.data.news.first %}
+<aside class="banner">
+  <div class="banner__inner">
+    <span class="banner__pill">{{ latest.date }}</span>
+    <p class="banner__text"><strong>{{ latest.title }}</strong> — {{ latest.description }}</p>
+    {% if latest.link != "" %}<a class="banner__link" href="{{ latest.link }}" target="_blank" rel="noopener">{{ latest.cta | default: "Learn more" }} ↗</a>{% endif %}
+  </div>
+</aside>
+{% endif %}
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__kicker">About</span>
+      <h2 class="section__title">An inclusive home for AI at UCalgary</h2>
+    </div>
+    <div class="about__grid">
+      <div class="about__lead">
+        <p>
+          The Transdisciplinary Artificial Intelligence Hub (TAIH) is a
+          collaborative research initiative dedicated to advancing
+          interdisciplinary AI to address complex societal and technological
+          challenges. We unite researchers, students, and industry partners to
+          drive high-impact innovation.
+        </p>
+        <p>
+          The Hub fosters an inclusive and collaborative space where members
+          from <strong>all faculties</strong> can contribute, connect, and
+          facilitate AI research — bringing together experts in engineering,
+          medicine, and the social implications of AI to create inclusive and
+          implementable work.
+        </p>
+      </div>
+      <ul class="about__stats">
+        <li><span class="stat__num">5</span><span class="stat__label">Research themes</span></li>
+        <li><span class="stat__num">4</span><span class="stat__label">Founding directors</span></li>
+        <li><span class="stat__num">All</span><span class="stat__label">Faculties welcome</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESEARCH ===================== -->
+<section class="section section--alt" id="research">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__kicker">Research</span>
+      <h2 class="section__title">Flagship directions</h2>
+      <p class="section__sub">Where transdisciplinary teams are making an impact.</p>
+    </div>
+    <div class="grid grid--research">
+      {% for theme in site.data.research %}
+      <article class="card card--research card--{{ theme.color }}">
+        <span class="card__glyph" aria-hidden="true">{{ theme.icon }}</span>
+        <h3 class="card__title">{{ theme.title }}</h3>
+        <p class="card__body">{{ theme.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EVENTS ===================== -->
+<section class="section" id="events">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__kicker">Events</span>
+      <h2 class="section__title">How we gather</h2>
+      <p class="section__sub">Year-round activities that keep the community connected.</p>
+    </div>
+    <div class="grid grid--events">
+      {% for event in site.data.events %}
+      <article class="card card--event">
+        <div class="card__meta">{{ event.format }}</div>
+        <h3 class="card__title">{{ event.title }}</h3>
+        <p class="card__body">{{ event.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEAM ===================== -->
+<section class="section section--alt" id="team">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__kicker">Team</span>
+      <h2 class="section__title">Founding board</h2>
+      <p class="section__sub">The directors who lead the Hub.</p>
+    </div>
+    <div class="grid grid--team">
+      {% for person in site.data.team.directors %}
+      {% assign parts = person.name | split: " " %}
+      <article class="card card--person">
+        <div class="person__avatar" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</div>
+        <h3 class="person__name">
+          {% if person.link != "" %}<a href="{{ person.link }}" target="_blank" rel="noopener">{{ person.name }} ↗</a>{% else %}{{ person.name }}{% endif %}
+        </h3>
+        <p class="person__role">{{ person.role }}</p>
+        <p class="person__focus">{{ person.focus }}</p>
+        <p class="person__aff">{{ person.affiliation }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SPONSORS ===================== -->
+<section class="section" id="sponsors">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__kicker">Sponsors</span>
+      <h2 class="section__title">With support from</h2>
+    </div>
+    <div class="sponsors">
+      {% for sponsor in site.data.sponsors %}
+      <div class="sponsor">
+        <span class="sponsor__name">{{ sponsor.name }}</span>
+        <span class="sponsor__aff">{{ sponsor.affiliation }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="sponsors__cta">
+      Interested in supporting or collaborating with the Hub?
+      <a href="mailto:{{ site.email }}">Get in touch →</a>
+    </p>
+  </div>
+</section>

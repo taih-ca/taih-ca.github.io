@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.title != site.title %}{{ page.title }} · {{ site.short_title }}{% else %}{{ site.title }} ({{ site.short_title }}){% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% seo title=false %}
+</head>
+<body>
+  {% include nav.html %}
+  <main>
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script>
+    // Mobile nav toggle
+    document.addEventListener('click', function (e) {
+      var toggle = e.target.closest('.nav__toggle');
+      var nav = document.querySelector('.nav');
+      if (toggle && nav) { nav.classList.toggle('is-open'); return; }
+      if (e.target.closest('.nav__links a') && nav) { nav.classList.remove('is-open'); }
+    });
+    // Shadow on scroll
+    var header = document.querySelector('.nav');
+    if (header) {
+      var onScroll = function () { header.classList.toggle('is-scrolled', window.scrollY > 8); };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<footer class="footer" id="contact">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="{{ '/assets/img/taih-logo.png' | relative_url }}" alt="{{ site.title }}">
+      <p>{{ site.description }}</p>
+    </div>
+    <div class="footer__col">
+      <h4>Contact</h4>
+      <p>
+        ICT Building<br>
+        University of Calgary<br>
+        Calgary, Alberta, Canada T2N 1N4
+      </p>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    </div>
+    <div class="footer__col">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="{{ site.links.website }}" target="_blank" rel="noopener">Hub Website ↗</a></li>
+        <li><a href="{{ site.links.ucalgary_ai }}" target="_blank" rel="noopener">UCalgary AI ↗</a></li>
+        <li><a href="{{ site.links.symposium }}" target="_blank" rel="noopener">2026 Symposium ↗</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bar">
+    <span>© 2025–{{ site.time | date: "%Y" }} Transdisciplinary AI Hub · University of Calgary</span>
+    <span>Bringing AI Researchers Together</span>
+  </div>
+</footer>
