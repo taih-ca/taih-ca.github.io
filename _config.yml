@@ -1,0 +1,49 @@
+title: Transdisciplinary AI Hub
+short_title: TAIH
+tagline: Bringing AI Researchers Together
+description: >-
+  The Transdisciplinary Artificial Intelligence Hub (TAIH) at the University of
+  Calgary is a collaborative research initiative advancing interdisciplinary AI
+  to address complex societal and technological challenges.
+
+institution: University of Calgary
+email: taih@ucalgary.ca
+address: ICT Building, University of Calgary, Calgary, Alberta, Canada T2N 1N4
+
+# Built for GitHub Pages (https://taih-ca.github.io)
+url: https://taih-ca.github.io
+baseurl: ""
+
+# External links
+links:
+  website: https://wpsites.ucalgary.ca/transdisciplinary-ai-hub/
+  ucalgary_ai: https://ai.ucalgary.ca/
+  symposium: https://www.eventbrite.com/e/2026-transdisciplinary-ai-hub-taih-annual-symposium-tickets-1986037603936
+
+# Navigation (in-page anchors + external)
+nav:
+  - { name: About, url: "#about" }
+  - { name: Research, url: "#research" }
+  - { name: Events, url: "#events" }
+  - { name: Team, url: "#team" }
+  - { name: Sponsors, url: "#sponsors" }
+  - { name: Contact, url: "#contact" }
+
+# Jekyll
+markdown: kramdown
+permalink: pretty
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - logos
+  - vendor
+  - .idea
+  - CLAUDE.md
+  - .DS_Store
