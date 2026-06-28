@@ -1,16 +1,16 @@
 <header class="nav">
   <div class="nav__inner">
     <a class="nav__brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
-      <img src="{{ '/assets/img/taih-logo.png' | relative_url }}" alt="{{ site.title }}">
+      <img src="{{ '/assets/img/taih-wordmark.png' | relative_url }}" alt="{{ site.title }}">
     </a>
     <button class="nav__toggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
     <nav class="nav__links">
       {% for item in site.nav %}
-        <a href="{{ item.url }}">{{ item.name }}</a>
+        <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
       {% endfor %}
-      <a class="nav__cta" href="{{ site.links.website }}" target="_blank" rel="noopener">UCalgary&nbsp;↗</a>
+      <a class="nav__cta" href="{{ '/join/' | relative_url }}">Join</a>
     </nav>
   </div>
 </header>
