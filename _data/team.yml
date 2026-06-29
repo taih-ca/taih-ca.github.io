@@ -3,6 +3,7 @@ directors:
   - name: Samira Ebrahimi Kahou
     photo: /images/samira-kahou.jpg
     role: Founder & Director
+    department: Electrical and Software Engineering
     affiliation: University of Calgary
     focus: Machine learning &amp; deep learning
     link: ""
@@ -10,6 +11,7 @@ directors:
   - name: Mahdis Bisheban
     photo: /images/mahdis-bisheban.jpg
     role: Founder & Co-Director
+    department: Mechanical and Manufacturing Engineering
     affiliation: University of Calgary
     focus: Robotics, control &amp; autonomy
     link: ""
@@ -17,13 +19,116 @@ directors:
   - name: Steve Drew
     photo: /images/steve-drew.jpeg
     role: Founder & Co-Director
+    department: Electrical and Software Engineering
     affiliation: University of Calgary
     focus: Distributed &amp; federated learning
-    link: ""
+    link: "https://denoslab.com"
 
   - name: Mostafa Farrokhabadi
     photo: /images/mostafa-farrokhabadi.jpg
     role: Founder & Co-Director
+    department: Electrical and Software Engineering
     affiliation: University of Calgary
     focus: AI for power &amp; energy systems
     link: "https://mfarrokhabadi.github.io/"
+
+# Advisory board
+advisory:
+  - name: Laleh Behjat
+    photo: /images/laleh-behjat.jpg
+    role: Professor
+    department: Electrical and Software Engineering
+  - name: Cathy Eastwood
+    photo: /images/cathy-eastwood.jpg
+    role: Associate Director, Research and Strategic Partnerships
+    department: Community Health Sciences
+  - name: Henry Leung
+    photo: /images/henry-leung.png
+    role: Professor
+    department: Electrical and Software Engineering
+  - name: Barry Cyril Sanders
+    photo: /images/barry-sanders.png
+    role: Professor
+    department: Physics and Astronomy
+
+# Full members
+members:
+  - name: Ahmad Abdel Latif
+    photo: /images/ahmad-latif.jpg
+    role: Assistant Professor
+    department: Electrical and Software Engineering
+  - name: Omar Boursalie
+    photo: /images/omar-boursalie.jpg
+    role: Assistant Professor
+    department: Biomedical Engineering
+  - name: Jackson Cone
+    photo: /images/jackson-cone.jpg
+    role: Assistant Professor
+    department: Psychology
+  - name: Christine Cao
+    photo: /images/christine-cao.jpg
+    role: Assistant Professor
+    department: Electrical and Software Engineering
+  - name: Lorenzo De Carli
+    photo: /images/lorenzo-carli.jpg
+    role: Associate Professor
+    department: Electrical and Software Engineering
+  - name: Nils Daniel Forkert
+    photo: /images/nils-forkert.jpg
+    role: Professor
+    department: Radiology
+  - name: Gouri Ginde
+    photo: /images/gouri-ginde.png
+    role: Assistant Professor
+    department: Electrical and Software Engineering
+  - name: Viki Kumar Prasad
+    photo: /images/viki-prasad.jpg
+    role: Assistant Professor
+    department: Chemistry
+  - name: Ana Nikolic
+    photo: /images/ana-nikolic.jpg
+    role: Assistant Professor
+    department: Pathology and Laboratory Medicine
+  - name: Jafar Shamsi
+    photo: /images/jafar-shamsi.jpg
+    role: Assistant Professor
+    department: Biomedical Engineering
+  - name: Sara Saeedi
+    photo: /images/sara-saeedi.png
+    role: Assistant Professor
+    department: Electrical and Software Engineering
+  - name: Joseph Thekinen
+    photo: /images/joseph-thekinen.png
+    role: Assistant Professor
+    department: Mechanical and Manufacturing Engineering
+  - name: Xin Wang
+    photo: /images/xin-wang.jpg
+    role: Professor
+    department: Geomatic Engineering
+  - name: Lincoln Xu
+    photo: /images/lincoln-xu.jpg
+    role: Assistant Professor
+    department: Geomatics Engineering
+  - name: Hongzhou Yang
+    photo: /images/hongzhou-yang.jpg
+    role: Assistant Professor
+    department: Geomatics Engineering
+
+# Administrative team
+admin:
+  - name: Nils Kiele
+    photo: /images/nils-kiele.jpg
+    role: PhD Student
+    department: ""
+  - name: Niki Mehri
+    photo: /images/niki-mehri.jpg
+    role: MSc Student
+    department: ""
+  - name: John Pangas
+    photo: /images/john-pangas.jpg
+    role: MSc Student
+    department: ""
+  - name: Jialin Yang
+    photo: /images/jialin-yang.jpg
+    role: PhD Student
+    department: ""

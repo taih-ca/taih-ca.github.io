@@ -1,0 +1,107 @@
+---
+layout: default
+title: Members
+permalink: /members/
+description: >-
+  Members of the Transdisciplinary AI Hub (TAIH), including leadership, the
+  advisory board, full members, and students across engineering, medicine, and
+  the sciences.
+---
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <div class="page-hero__bg" aria-hidden="true">
+    <span class="shard shard--tan"></span>
+    <span class="shard shard--orange"></span>
+  </div>
+  <div class="container">
+    <p class="hero__eyebrow">People</p>
+    <h1 class="page-hero__title">Members</h1>
+    <p class="page-hero__lead">
+      TAIH brings together researchers and students from engineering, medicine,
+      the sciences, and beyond. These are the people advancing transdisciplinary
+      AI across disciplines and industry.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== LEADERSHIP ===================== -->
+<section class="section" id="leadership">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Leadership</h2>
+      <p class="section__sub">The founders who direct the Hub.</p>
+    </div>
+    <div class="grid grid--team">
+      {% for p in site.data.team.directors %}
+      {% assign parts = p.name | split: " " %}
+      <article class="card card--person">
+        <div class="person__avatar" aria-hidden="true">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</div>
+        <h3 class="person__name">{% if p.link != "" %}<a href="{{ p.link }}" target="_blank" rel="noopener">{{ p.name }} ↗</a>{% else %}{{ p.name }}{% endif %}</h3>
+        <p class="person__role">{{ p.role }}</p>
+        <p class="person__aff">{{ p.department }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ADVISORY BOARD ===================== -->
+<section class="section section--alt" id="advisory">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Advisory board</h2>
+    </div>
+    <div class="grid grid--team">
+      {% for p in site.data.team.advisory %}
+      {% assign parts = p.name | split: " " %}
+      <article class="card card--person">
+        <div class="person__avatar" aria-hidden="true">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</div>
+        <h3 class="person__name">{{ p.name }}</h3>
+        <p class="person__role">{{ p.role }}</p>
+        {% if p.department != "" %}<p class="person__aff">{{ p.department }}</p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FULL MEMBERS ===================== -->
+<section class="section" id="full-members">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Full members</h2>
+    </div>
+    <div class="grid grid--team">
+      {% for p in site.data.team.members %}
+      {% assign parts = p.name | split: " " %}
+      <article class="card card--person">
+        <div class="person__avatar" aria-hidden="true">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</div>
+        <h3 class="person__name">{{ p.name }}</h3>
+        <p class="person__role">{{ p.role }}</p>
+        {% if p.department != "" %}<p class="person__aff">{{ p.department }}</p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ADMINISTRATIVE TEAM ===================== -->
+<section class="section section--alt" id="administrative-team">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Administrative team</h2>
+    </div>
+    <div class="grid grid--team">
+      {% for p in site.data.team.admin %}
+      {% assign parts = p.name | split: " " %}
+      <article class="card card--person">
+        <div class="person__avatar" aria-hidden="true">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</div>
+        <h3 class="person__name">{{ p.name }}</h3>
+        <p class="person__role">{{ p.role }}</p>
+        {% if p.department != "" %}<p class="person__aff">{{ p.department }}</p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

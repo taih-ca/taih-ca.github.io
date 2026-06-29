@@ -1,0 +1,41 @@
+---
+layout: default
+title: News
+permalink: /news/
+description: >-
+  News and announcements from the Transdisciplinary AI Hub (TAIH).
+---
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <div class="page-hero__bg" aria-hidden="true">
+    <span class="shard shard--tan"></span>
+    <span class="shard shard--orange"></span>
+  </div>
+  <div class="container">
+    <p class="hero__eyebrow">News</p>
+    <h1 class="page-hero__title">News</h1>
+    <p class="page-hero__lead">
+      Announcements and updates from the Transdisciplinary AI Hub.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== NEWS LIST ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="news-list">
+      {% assign items = site.news | sort: 'date' | reverse %}
+      {% for item in items %}
+      <a class="news-item" href="{{ item.url | relative_url }}">
+        <div class="news-item__date">{{ item.date | date: "%B %-d, %Y" }}</div>
+        <div class="news-item__body">
+          <h3 class="news-item__title">{{ item.title }}</h3>
+          <p class="news-item__desc">{{ item.summary }}</p>
+          <span class="news-item__cta">Read more →</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
