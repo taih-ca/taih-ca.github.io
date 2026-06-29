@@ -40,6 +40,7 @@ description: >-
         <h3 class="person__name">{% if p.link != "" %}<a href="{{ p.link }}" target="_blank" rel="noopener">{{ p.name }} ↗</a>{% else %}{{ p.name }}{% endif %}</h3>
         <p class="person__role">{{ p.role }}</p>
         <p class="person__aff">{{ p.department }}</p>
+        {% if p.links %}<p class="person__links">{% for l in p.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} ↗</a>{% endfor %}</p>{% endif %}
       </article>
       {% endfor %}
     </div>

@@ -29,13 +29,13 @@ defaults:
 
 # External links
 links:
-  website: https://wpsites.ucalgary.ca/transdisciplinary-ai-hub/
   ucalgary_ai: https://ai.ucalgary.ca/
   symposium: https://www.eventbrite.com/e/2026-transdisciplinary-ai-hub-taih-annual-symposium-tickets-1986037603936
 
 # Navigation (in-page anchors + external)
 nav:
   - { name: About, url: "/#about" }
+  - { name: Research, url: "/research/" }
   - { name: Members, url: "/members/" }
   - { name: News, url: "/#news" }
   - { name: Contact, url: "/#contact" }

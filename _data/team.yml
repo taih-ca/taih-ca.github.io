@@ -1,4 +1,4 @@
-# Founding board of the Transdisciplinary AI Hub
+# Directors of the Transdisciplinary AI Hub
 directors:
   - name: Samira Ebrahimi Kahou
     photo: /images/samira-kahou.jpg
@@ -7,6 +7,8 @@ directors:
     affiliation: University of Calgary
     focus: Machine learning &amp; deep learning
     link: ""
+    links:
+      - { label: "Mila", url: "https://mila.quebec/en/directory/samira-ebrahimi-kahou" }
 
   - name: Mahdis Bisheban
     photo: /images/mahdis-bisheban.jpg

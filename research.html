@@ -1,0 +1,89 @@
+---
+layout: default
+title: Research
+permalink: /research/
+description: >-
+  Research at the Transdisciplinary AI Hub (TAIH), University of Calgary,
+  spanning flagship themes and selected top-tier publications from the Hub's
+  directors at venues including NeurIPS, ICML, ICLR, AAAI, and the leading IEEE
+  journals.
+---
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <div class="page-hero__bg" aria-hidden="true">
+    <span class="shard shard--tan"></span>
+    <span class="shard shard--orange"></span>
+  </div>
+  <div class="container">
+    <p class="hero__eyebrow">Research</p>
+    <h1 class="page-hero__title">Research</h1>
+    <p class="page-hero__lead">
+      TAIH research turns AI methods into solutions across engineering, medicine,
+      the sciences, and the social study of AI. Below are the flagship themes that
+      guide our work, along with a selection of top-tier publications from the
+      Hub's directors.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== RESEARCH THEMES ===================== -->
+<section class="section" id="themes">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Research themes</h2>
+      <p class="section__sub">Where transdisciplinary teams are making an impact.</p>
+    </div>
+    <div class="grid grid--research">
+      {% for theme in site.data.research %}
+      <article class="card card--research card--{{ theme.color }}">
+        <span class="card__glyph" aria-hidden="true">{{ theme.icon }}</span>
+        <h3 class="card__title">{{ theme.title }}</h3>
+        <p class="card__body">{{ theme.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SELECTED PUBLICATIONS ===================== -->
+<section class="section section--alt" id="publications">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Selected publications</h2>
+      <p class="section__sub">Top-tier work from the Hub's directors.</p>
+    </div>
+    <p class="pub-intro">
+      A selection of peer-reviewed work from the Hub's directors at the field's
+      leading venues, including NeurIPS, ICML, ICLR, AAAI, and the flagship IEEE
+      journals. This list is curated and highlights top-tier venues, so it is not
+      a complete publication record.
+    </p>
+    <div class="pub-groups">
+      {% for person in site.data.team.directors %}
+      {% assign group = site.data.publications | where: "name", person.name | first %}
+      {% if group %}
+      <div class="pub-group">
+        <div class="pub-group__head">
+          <h3 class="pub-group__name">{% if person.link != "" %}<a href="{{ person.link }}" target="_blank" rel="noopener">{{ person.name }} ↗</a>{% else %}{{ person.name }}{% endif %}</h3>
+          <span class="pub-group__role">{{ person.role }}</span>
+          {% if person.links %}<span class="pub-group__links">{% for l in person.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} ↗</a>{% endfor %}</span>{% endif %}
+        </div>
+        <ul class="pub-list">
+          {% for pub in group.publications %}
+          <li class="pub">
+            <span class="pub__year">{{ pub.year }}</span>
+            <div>
+              <p class="pub__title"><a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a></p>
+              {% if pub.authors %}<p class="pub__authors">{{ pub.authors }}</p>{% endif %}
+              <p class="pub__meta"><span class="pub__venue">{{ pub.venue }}</span></p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
