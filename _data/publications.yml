@@ -1,0 +1,136 @@
+# Selected top-tier publications by TAIH directors.
+# DRAFT compiled from DBLP, Google Scholar, and official proceedings. Verify each entry before relying on it.
+# Each group is matched to a director in team.yml by exact name.
+#   venue = short venue name, year = publication year, url = DOI or official proceedings page.
+
+- name: Samira Ebrahimi Kahou
+  publications:
+    - title: "Handling Delay in Real-Time Reinforcement Learning"
+      authors: "I. Anokhin, Rishav, M. Riemer, S. Chung, I. Rish, S. Ebrahimi Kahou"
+      venue: "ICLR"
+      year: 2025
+      url: "https://openreview.net/forum?id=YOc5t8PHf2"
+    - title: "Learning to Play Atari in a World of Tokens"
+      authors: "P. Agarwal, S. Andrews, S. Ebrahimi Kahou"
+      venue: "ICML"
+      year: 2024
+      url: "https://proceedings.mlr.press/v235/agarwal24b.html"
+    - title: "Latent Variable Sequential Set Transformers for Joint Multi-Agent Motion Prediction"
+      authors: "R. Girgis, F. Golemo, F. Codevilla, et al., S. Ebrahimi Kahou, F. Heide, C. Pal"
+      venue: "ICLR"
+      year: 2022
+      url: "https://openreview.net/forum?id=Dup_dDqkZC5"
+    - title: "Towards Deep Conversational Recommendations"
+      authors: "R. Li, S. Ebrahimi Kahou, et al."
+      venue: "NeurIPS"
+      year: 2018
+      url: "https://proceedings.neurips.cc/paper/2018/hash/800de15c79c8d840f4e78d3af937d4d4-Abstract.html"
+    - title: "ExtremeWeather: A Large-Scale Climate Dataset for Semi-Supervised Detection, Localization, and Understanding of Extreme Weather Events"
+      authors: "E. Racah, C. Beckham, T. Maharaj, S. Ebrahimi Kahou, et al."
+      venue: "NeurIPS"
+      year: 2017
+      url: "https://proceedings.neurips.cc/paper/2017/hash/519c84155964659375821f7ca576f095-Abstract.html"
+    - title: 'The "Something Something" Video Database for Learning and Evaluating Visual Common Sense'
+      authors: "R. Goyal, S. Ebrahimi Kahou, et al."
+      venue: "ICCV"
+      year: 2017
+      url: "https://doi.org/10.1109/ICCV.2017.622"
+    - title: "Do Deep Convolutional Nets Really Need to be Deep and Convolutional?"
+      authors: "G. Urban, K. J. Geras, S. Ebrahimi Kahou, et al."
+      venue: "ICLR"
+      year: 2017
+      url: "https://openreview.net/forum?id=r10FA8Kxg"
+    - title: "FitNets: Hints for Thin Deep Nets"
+      authors: "A. Romero, N. Ballas, S. Ebrahimi Kahou, et al."
+      venue: "ICLR"
+      year: 2015
+      url: "https://arxiv.org/abs/1412.6550"
+
+- name: Mahdis Bisheban
+  publications:
+    - title: "Geometric Adaptive Control With Neural Networks for a Quadrotor in Wind Fields"
+      authors: "M. Bisheban, T. Lee"
+      venue: "IEEE Trans. Control Systems Technology"
+      year: 2021
+      url: "https://doi.org/10.1109/TCST.2020.3006184"
+    - title: "Geometric Controls of a Quadrotor UAV with Decoupled Yaw Control"
+      authors: "K. Gamagedara, M. Bisheban, E. Kaufman, T. Lee"
+      venue: "ACC"
+      year: 2019
+      url: "https://doi.org/10.23919/ACC.2019.8815189"
+    - title: "Geometric Adaptive Control for a Quadrotor UAV with Wind Disturbance Rejection"
+      authors: "M. Bisheban, T. Lee"
+      venue: "CDC"
+      year: 2018
+      url: "https://doi.org/10.1109/CDC.2018.8619390"
+    - title: "Computational Geometric System Identification for the Attitude Dynamics on SO(3)"
+      authors: "M. Bisheban, T. Lee"
+      venue: "ACC"
+      year: 2017
+      url: "https://doi.org/10.23919/ACC.2017.7963287"
+
+- name: Steve Drew
+  publications:
+    - title: "Trustworthy and Responsible AI for Human-Centric Autonomous Decision-Making Systems"
+      authors: "F. Dehghani, M. Dibaji, et al."
+      venue: "TMLR"
+      year: 2025
+      url: "https://openreview.net/forum?id=1k833OTHpI"
+    - title: "SelfXit: An Unsupervised Early Exit Mechanism for Deep Neural Networks"
+      authors: "H. KhademSohi, M. Abedi, Y. Ioannou, S. Drew, P. Jamshidi, H. Hemmati"
+      venue: "TMLR"
+      year: 2024
+      url: "https://openreview.net/forum?id=h4rUKKfl5S"
+    - title: "USDNL: Uncertainty-Based Single Dropout in Noisy Label Learning"
+      authors: "Y. Xu, X. Niu, J. Yang, S. Drew, J. Zhou, R. Chen"
+      venue: "AAAI"
+      year: 2023
+      url: "https://doi.org/10.1609/aaai.v37i9.26264"
+    - title: "Resilient and Communication Efficient Learning for Heterogeneous Federated Systems"
+      authors: "Z. Zhu, J. Hong, S. Drew, J. Zhou"
+      venue: "ICML"
+      year: 2022
+      url: "https://proceedings.mlr.press/v162/zhu22e.html"
+
+- name: Mostafa Farrokhabadi
+  publications:
+    - title: "Machine Learning-Based Control of Electric Vehicle Charging for Practical Distribution Systems With Solar Generation"
+      authors: "I. Calero, C. A. Cañizares, M. Farrokhabadi, K. Bhattacharya"
+      venue: "IEEE Trans. Smart Grid"
+      year: 2024
+      url: "https://doi.org/10.1109/TSG.2023.3333789"
+    - title: "A Review of Modeling and Applications of Energy Storage Systems in Power Grids"
+      authors: "F. Calero, C. A. Cañizares, K. Bhattacharya, et al., M. Farrokhabadi"
+      venue: "Proceedings of the IEEE"
+      year: 2023
+      url: "https://doi.org/10.1109/JPROC.2022.3158607"
+    - title: "Optimal Solar and Energy Storage System Sizing for Behind the Meter Applications"
+      authors: "J. Arteaga, M. Farrokhabadi, N. Amjady, H. Zareipour"
+      venue: "IEEE Trans. Sustainable Energy"
+      year: 2023
+      url: "https://doi.org/10.1109/TSTE.2022.3219347"
+    - title: "Day-Ahead Electricity Demand Forecasting Competition: Post-COVID Paradigm"
+      authors: "M. Farrokhabadi, J. Browell, Y. Wang, et al."
+      venue: "IEEE Open Access J. Power & Energy"
+      year: 2022
+      url: "https://doi.org/10.1109/OAJPE.2022.3161101"
+    - title: "Microgrid Stability Definitions, Analysis, and Examples"
+      authors: "M. Farrokhabadi, C. A. Cañizares, J. W. Simpson-Porco, et al."
+      venue: "IEEE Trans. Power Systems"
+      year: 2020
+      url: "https://doi.org/10.1109/TPWRS.2019.2925703"
+    - title: "Battery Energy Storage System Models for Microgrid Stability Analysis and Dynamic Simulation"
+      authors: "M. Farrokhabadi, S. König, C. A. Cañizares, K. Bhattacharya, T. Leibfried"
+      venue: "IEEE Trans. Power Systems"
+      year: 2018
+      url: "https://doi.org/10.1109/TPWRS.2017.2740163"
+    - title: "Unit Commitment for Isolated Microgrids Considering Frequency Control"
+      authors: "M. Farrokhabadi, C. A. Cañizares, K. Bhattacharya"
+      venue: "IEEE Trans. Smart Grid"
+      year: 2018
+      url: "https://doi.org/10.1109/TSG.2016.2629982"
+    - title: "Frequency Control in Isolated/Islanded Microgrids Through Voltage Regulation"
+      authors: "M. Farrokhabadi, C. A. Cañizares, K. Bhattacharya"
+      venue: "IEEE Trans. Smart Grid"
+      year: 2017
+      url: "https://doi.org/10.1109/TSG.2015.2479576"

@@ -16,7 +16,7 @@ Most content is data-driven — edit the YAML files in `_data/`, no HTML needed:
 |------|----------|
 | `_data/research.yml` | Flagship research themes |
 | `_data/events.yml`   | Recurring events / activities |
-| `_data/team.yml`     | Founding board / directors |
+| `_data/team.yml`     | Directors |
 | `_data/sponsors.yml` | Sponsors & partners |
 | `_data/news.yml`     | Announcement banner (newest first) |
 | `_config.yml`        | Site title, nav, contact info, external links |

@@ -104,7 +104,7 @@ layout: default
 <section class="section section--alt" id="team">
   <div class="container">
     <div class="section__head">
-      <h2 class="section__title">Founding board</h2>
+      <h2 class="section__title">Directors</h2>
       <p class="section__sub">The directors who lead the Hub.</p>
     </div>
     <div class="grid grid--team">
@@ -118,6 +118,7 @@ layout: default
         <p class="person__role">{{ person.role }}</p>
         <p class="person__focus">{{ person.focus }}</p>
         <p class="person__aff">{{ person.affiliation }}</p>
+        {% if person.links %}<p class="person__links">{% for l in person.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} ↗</a>{% endfor %}</p>{% endif %}
       </article>
       {% endfor %}
     </div>
