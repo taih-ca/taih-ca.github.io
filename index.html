@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Home
 ---
 
 <!-- ===================== HERO ===================== -->
@@ -15,7 +14,7 @@ title: Home
     <div class="hero__text">
       <h1 class="hero__title">
         Transdisciplinary<br>
-        <span class="hero__title-accent">Artificial Intelligence Hub</span>
+        <span class="hero__title-accent">AI Hub</span>
       </h1>
       <p class="hero__lead">
         A transdisciplinary research initiative dedicated to applying AI
@@ -49,7 +48,7 @@ title: Home
         complex societal and technological challenges.
       </p>
       <p>
-        Our work is <strong>transdisciplinary</strong> by design, connecting
+        Our work is transdisciplinary by design, connecting
         experts in engineering, medicine, the sciences, and the social study of
         AI so that methods built in one field can be adapted and deployed in
         many others, and so that industry can put that expertise to work.
@@ -58,32 +57,51 @@ title: Home
   </div>
 </section>
 
-<!-- ===================== NEWS ===================== -->
-<section class="section section--alt" id="news">
+<!-- ===================== RESEARCH ===================== -->
+<section class="section section--alt" id="research">
   <div class="container">
     <div class="section__head">
-      <h2 class="section__title">Latest news</h2>
-      <p class="section__sub">Announcements and upcoming events from the Hub.</p>
+      <h2 class="section__title">Research themes</h2>
+      <p class="section__sub">Where transdisciplinary teams are making an impact.</p>
     </div>
-    <div class="news-list">
-      {% for item in site.data.news %}
-      <article class="news-item">
-        <div class="news-item__date">{{ item.date }}</div>
-        <div class="news-item__body">
-          <h3 class="news-item__title">{{ item.title }}</h3>
-          <p class="news-item__desc">{{ item.description }}</p>
-          {% if item.link != "" %}
-          <a class="news-item__cta" href="{{ item.link }}" target="_blank" rel="noopener">{{ item.cta | default: "Read more" }} ↗</a>
-          {% endif %}
-        </div>
+    <div class="grid grid--research">
+      {% for theme in site.data.research %}
+      <article class="card card--research card--{{ theme.color }}">
+        <span class="card__glyph" aria-hidden="true">{{ theme.icon }}</span>
+        <h3 class="card__title">{{ theme.title }}</h3>
+        <p class="card__body">{{ theme.description }}</p>
       </article>
       {% endfor %}
     </div>
   </div>
 </section>
 
+<!-- ===================== NEWS ===================== -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">News</h2>
+      <p class="section__sub">Announcements and updates from the Hub.</p>
+    </div>
+    <div class="news-list">
+      {% assign items = site.news | sort: 'date' | reverse %}
+      {% for item in items limit: 2 %}
+      <a class="news-item" href="{{ item.url | relative_url }}">
+        <div class="news-item__date">{{ item.date | date: "%B %-d, %Y" }}</div>
+        <div class="news-item__body">
+          <h3 class="news-item__title">{{ item.title }}</h3>
+          <p class="news-item__desc">{{ item.summary }}</p>
+          <span class="news-item__cta">Read more →</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <p class="news-more"><a class="btn btn--ghost" href="{{ '/news/' | relative_url }}">More…</a></p>
+  </div>
+</section>
+
 <!-- ===================== TEAM ===================== -->
-<section class="section" id="team">
+<section class="section section--alt" id="team">
   <div class="container">
     <div class="section__head">
       <h2 class="section__title">Founding board</h2>
@@ -103,14 +121,15 @@ title: Home
       </article>
       {% endfor %}
     </div>
+    <p class="team__more"><a href="{{ '/members/' | relative_url }}">See all members, advisory board, and team →</a></p>
   </div>
 </section>
 
 <!-- ===================== EVENTS ===================== -->
-<section class="section section--alt" id="events">
+<section class="section" id="events">
   <div class="container">
     <div class="section__head">
-      <h2 class="section__title">How we gather</h2>
+      <h2 class="section__title">Activities</h2>
       <p class="section__sub">Year-round activities that keep the community connected.</p>
     </div>
     <div class="grid grid--events">
@@ -126,10 +145,10 @@ title: Home
 </section>
 
 <!-- ===================== SPONSORS ===================== -->
-<section class="section" id="sponsors">
+<section class="section section--alt" id="sponsors">
   <div class="container">
     <div class="section__head">
-      <h2 class="section__title">With support from</h2>
+      <h2 class="section__title">Sponsors</h2>
     </div>
     <div class="sponsors">
       {% for sponsor in site.data.sponsors %}

@@ -1,4 +1,4 @@
-title: Transdisciplinary AI Hub
+title: TAIH - Transdisciplinary AI Hub
 short_title: TAIH
 tagline: Bringing AI Researchers Together
 description: >-
@@ -11,9 +11,21 @@ institution: University of Calgary
 email: taih@ucalgary.ca
 address: ICT Building, University of Calgary, Calgary, Alberta, Canada T2N 1N4
 
-# Built for GitHub Pages (https://taih-ca.github.io)
-url: https://taih-ca.github.io
+# Custom domain served via GitHub Pages (see CNAME)
+url: https://taih.ca
 baseurl: ""
+
+# SEO
+logo: /assets/img/taih-mark.png
+author: Transdisciplinary AI Hub
+lang: en_CA
+# Uncomment and paste the token from Google Search Console (HTML tag method), then redeploy
+# google_site_verification: "PASTE_TOKEN_HERE"
+
+defaults:
+  - scope: { path: "" }
+    values:
+      image: /assets/img/og-image.png
 
 # External links
 links:
@@ -24,10 +36,8 @@ links:
 # Navigation (in-page anchors + external)
 nav:
   - { name: About, url: "/#about" }
+  - { name: Members, url: "/members/" }
   - { name: News, url: "/#news" }
-  - { name: Events, url: "/#events" }
-  - { name: Team, url: "/#team" }
-  - { name: Sponsors, url: "/#sponsors" }
   - { name: Contact, url: "/#contact" }
 
 # Jekyll
@@ -36,8 +46,14 @@ permalink: pretty
 sass:
   style: compressed
 
+collections:
+  news:
+    output: true
+    permalink: /news/:name/
+
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - README.md
