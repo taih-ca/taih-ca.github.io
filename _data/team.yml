@@ -6,9 +6,8 @@ directors:
     department: Electrical and Software Engineering
     affiliation: University of Calgary
     focus: Machine learning &amp; deep learning
-    link: ""
-    links:
-      - { label: "Mila", url: "https://mila.quebec/en/directory/samira-ebrahimi-kahou" }
+    link: "https://profiles.ucalgary.ca/samira-ebrahimi-kahou"
+    website: "https://mila.quebec/en/directory/samira-ebrahimi-kahou"
 
   - name: Mahdis Bisheban
     photo: /images/mahdis-bisheban.jpg
@@ -16,7 +15,7 @@ directors:
     department: Mechanical and Manufacturing Engineering
     affiliation: University of Calgary
     focus: Robotics, control &amp; autonomy
-    link: ""
+    link: "https://profiles.ucalgary.ca/mahdis-bisheban"
 
   - name: Steve Drew
     photo: /images/steve-drew.jpeg
@@ -24,7 +23,8 @@ directors:
     department: Electrical and Software Engineering
     affiliation: University of Calgary
     focus: Distributed &amp; federated learning
-    link: "https://denoslab.com"
+    link: "https://profiles.ucalgary.ca/steve-drew"
+    website: "https://denoslab.com"
 
   - name: Mostafa Farrokhabadi
     photo: /images/mostafa-farrokhabadi.jpg
@@ -32,7 +32,8 @@ directors:
     department: Electrical and Software Engineering
     affiliation: University of Calgary
     focus: AI for power &amp; energy systems
-    link: "https://mfarrokhabadi.github.io/"
+    link: "https://profiles.ucalgary.ca/mostafa-farrokhabadi"
+    website: "https://mfarrokhabadi.github.io/"
 
 # Advisory board
 advisory:
@@ -40,81 +41,115 @@ advisory:
     photo: /images/laleh-behjat.jpg
     role: Professor
     department: Electrical and Software Engineering
+    link: "https://profiles.ucalgary.ca/laleh-behjat"
   - name: Cathy Eastwood
     photo: /images/cathy-eastwood.jpg
     role: Associate Director, Research and Strategic Partnerships
     department: Community Health Sciences
+    link: "https://profiles.ucalgary.ca/cathy-eastwood"
   - name: Henry Leung
     photo: /images/henry-leung.png
     role: Professor
     department: Electrical and Software Engineering
+    link: "https://profiles.ucalgary.ca/henry-leung"
   - name: Barry Cyril Sanders
     photo: /images/barry-sanders.png
     role: Professor
     department: Physics and Astronomy
+    link: "https://profiles.ucalgary.ca/barry-sanders"
 
-# Full members
+# Full members (alphabetical by surname)
 members:
   - name: Ahmad Abdel Latif
     photo: /images/ahmad-latif.jpg
     role: Assistant Professor
     department: Electrical and Software Engineering
+    link: "https://profiles.ucalgary.ca/ahmad-abdel-latif"
+  - name: Alexandru Badescu
+    photo: /images/alexandru-badescu.jpg
+    role: Professor
+    department: Mathematics and Statistics
+    link: "https://profiles.ucalgary.ca/alexandru-badescu"
   - name: Omar Boursalie
     photo: /images/omar-boursalie.jpg
     role: Assistant Professor
     department: Biomedical Engineering
-  - name: Jackson Cone
-    photo: /images/jackson-cone.jpg
-    role: Assistant Professor
-    department: Psychology
+    link: "https://profiles.ucalgary.ca/omar-boursalie"
   - name: Christine Cao
     photo: /images/christine-cao.jpg
     role: Assistant Professor
     department: Electrical and Software Engineering
+    link: "https://profiles.ucalgary.ca/christine-cao"
+  - name: Jackson Cone
+    photo: /images/jackson-cone.jpg
+    role: Assistant Professor
+    department: Psychology
+    link: "https://profiles.ucalgary.ca/jackson-cone"
   - name: Lorenzo De Carli
     photo: /images/lorenzo-carli.jpg
     role: Associate Professor
     department: Electrical and Software Engineering
+    link: "https://profiles.ucalgary.ca/lorenzo-de-carli"
+  - name: Gabriel Fabreau
+    photo: /images/gabriel-fabreau.jpg
+    role: Associate Professor
+    department: Medicine
+    link: "https://profiles.ucalgary.ca/gabriel-fabreau"
   - name: Nils Daniel Forkert
     photo: /images/nils-forkert.jpg
     role: Professor
     department: Radiology
+    link: "https://profiles.ucalgary.ca/nils-daniel-forkert"
   - name: Gouri Ginde
     photo: /images/gouri-ginde.png
     role: Assistant Professor
     department: Electrical and Software Engineering
-  - name: Viki Kumar Prasad
-    photo: /images/viki-prasad.jpg
-    role: Assistant Professor
-    department: Chemistry
+    link: "https://profiles.ucalgary.ca/gouri-ginde"
+  - name: Mohammad Keyhani
+    photo: /images/mohammad-keyhani.jpg
+    role: Associate Professor
+    department: Entrepreneurship and Innovation
+    link: "https://profiles.ucalgary.ca/mohammad-keyhani"
   - name: Ana Nikolic
     photo: /images/ana-nikolic.jpg
     role: Assistant Professor
     department: Pathology and Laboratory Medicine
-  - name: Jafar Shamsi
-    photo: /images/jafar-shamsi.jpg
+    link: "https://profiles.ucalgary.ca/ana-nikolic"
+  - name: Viki Kumar Prasad
+    photo: /images/viki-prasad.jpg
     role: Assistant Professor
-    department: Biomedical Engineering
+    department: Chemistry
+    link: "https://profiles.ucalgary.ca/viki-kumar-prasad"
   - name: Sara Saeedi
     photo: /images/sara-saeedi.png
     role: Assistant Professor
     department: Electrical and Software Engineering
+    link: "https://profiles.ucalgary.ca/sara-saeedi"
+  - name: Jafar Shamsi
+    photo: /images/jafar-shamsi.jpg
+    role: Assistant Professor
+    department: Biomedical Engineering
+    link: "https://profiles.ucalgary.ca/jafar-shamsi"
   - name: Joseph Thekinen
     photo: /images/joseph-thekinen.png
     role: Assistant Professor
     department: Mechanical and Manufacturing Engineering
+    link: "https://profiles.ucalgary.ca/joseph-thekinen"
   - name: Xin Wang
     photo: /images/xin-wang.jpg
     role: Professor
     department: Geomatic Engineering
+    link: "https://profiles.ucalgary.ca/xin-wang"
   - name: Lincoln Xu
     photo: /images/lincoln-xu.jpg
     role: Assistant Professor
     department: Geomatics Engineering
+    link: "https://profiles.ucalgary.ca/lincoln-xu"
   - name: Hongzhou Yang
     photo: /images/hongzhou-yang.jpg
     role: Assistant Professor
     department: Geomatics Engineering
+    link: "https://profiles.ucalgary.ca/hongzhou-yang"
 
 # Administrative team
 admin:
@@ -130,6 +165,7 @@ admin:
     photo: /images/john-pangas.jpg
     role: MSc Student
     department: ""
+    link: "https://profiles.ucalgary.ca/john-pangas"
   - name: Jialin Yang
     photo: /images/jialin-yang.jpg
     role: PhD Student

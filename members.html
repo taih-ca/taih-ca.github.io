@@ -36,8 +36,8 @@ description: >-
       {% for p in site.data.team.directors %}
       {% assign parts = p.name | split: " " %}
       <article class="card card--person">
-        <div class="person__avatar" aria-hidden="true">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</div>
-        <h3 class="person__name">{% if p.link != "" %}<a href="{{ p.link }}" target="_blank" rel="noopener">{{ p.name }} ↗</a>{% else %}{{ p.name }}{% endif %}</h3>
+        {% if p.link and p.link != "" %}<a class="person__avatar" href="{{ p.link }}" target="_blank" rel="noopener" aria-label="{{ p.name }} — UCalgary profile">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</a>{% else %}<div class="person__avatar" aria-hidden="true">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</div>{% endif %}
+        <h3 class="person__name">{% if p.website and p.website != "" %}<a href="{{ p.website }}" target="_blank" rel="noopener">{{ p.name }} ↗</a>{% else %}{{ p.name }}{% endif %}</h3>
         <p class="person__role">{{ p.role }}</p>
         <p class="person__aff">{{ p.department }}</p>
         {% if p.links %}<p class="person__links">{% for l in p.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} ↗</a>{% endfor %}</p>{% endif %}
@@ -57,8 +57,8 @@ description: >-
       {% for p in site.data.team.advisory %}
       {% assign parts = p.name | split: " " %}
       <article class="card card--person">
-        <div class="person__avatar" aria-hidden="true">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</div>
-        <h3 class="person__name">{{ p.name }}</h3>
+        {% if p.link and p.link != "" %}<a class="person__avatar" href="{{ p.link }}" target="_blank" rel="noopener" aria-label="{{ p.name }} — UCalgary profile">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</a>{% else %}<div class="person__avatar" aria-hidden="true">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</div>{% endif %}
+        <h3 class="person__name">{% if p.website and p.website != "" %}<a href="{{ p.website }}" target="_blank" rel="noopener">{{ p.name }} ↗</a>{% else %}{{ p.name }}{% endif %}</h3>
         <p class="person__role">{{ p.role }}</p>
         {% if p.department != "" %}<p class="person__aff">{{ p.department }}</p>{% endif %}
       </article>
@@ -77,8 +77,8 @@ description: >-
       {% for p in site.data.team.members %}
       {% assign parts = p.name | split: " " %}
       <article class="card card--person">
-        <div class="person__avatar" aria-hidden="true">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</div>
-        <h3 class="person__name">{{ p.name }}</h3>
+        {% if p.link and p.link != "" %}<a class="person__avatar" href="{{ p.link }}" target="_blank" rel="noopener" aria-label="{{ p.name }} — UCalgary profile">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</a>{% else %}<div class="person__avatar" aria-hidden="true">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</div>{% endif %}
+        <h3 class="person__name">{% if p.website and p.website != "" %}<a href="{{ p.website }}" target="_blank" rel="noopener">{{ p.name }} ↗</a>{% else %}{{ p.name }}{% endif %}</h3>
         <p class="person__role">{{ p.role }}</p>
         {% if p.department != "" %}<p class="person__aff">{{ p.department }}</p>{% endif %}
       </article>
@@ -97,8 +97,8 @@ description: >-
       {% for p in site.data.team.admin %}
       {% assign parts = p.name | split: " " %}
       <article class="card card--person">
-        <div class="person__avatar" aria-hidden="true">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</div>
-        <h3 class="person__name">{{ p.name }}</h3>
+        {% if p.link and p.link != "" %}<a class="person__avatar" href="{{ p.link }}" target="_blank" rel="noopener" aria-label="{{ p.name }} — UCalgary profile">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</a>{% else %}<div class="person__avatar" aria-hidden="true">{% if p.photo %}<img class="person__photo" src="{{ p.photo | relative_url }}" alt="">{% else %}{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</div>{% endif %}
+        <h3 class="person__name">{% if p.website and p.website != "" %}<a href="{{ p.website }}" target="_blank" rel="noopener">{{ p.name }} ↗</a>{% else %}{{ p.name }}{% endif %}</h3>
         <p class="person__role">{{ p.role }}</p>
         {% if p.department != "" %}<p class="person__aff">{{ p.department }}</p>{% endif %}
       </article>
