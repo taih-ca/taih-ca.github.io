@@ -57,6 +57,11 @@ advisory:
     role: Professor
     department: Physics and Astronomy
     link: "https://profiles.ucalgary.ca/barry-sanders"
+  - name: Mohamed Zohiri
+    photo: /images/mohamed-zohiri.jpg
+    role: Legal Counsel
+    department: Alberta Securities Commission
+    link: ""
 
 # Full members (alphabetical by surname)
 members:
