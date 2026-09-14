@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Preview the site locally: ./bin/serve  (then open http://localhost:4000)
+set -euo pipefail
+cd "$(dirname "$0")/.."
+export RUBYOPT="-r$(pwd)/bin/ruby4_compat.rb ${RUBYOPT:-}"
+exec bundle exec jekyll serve --livereload --port "${PORT:-4000}" "$@"

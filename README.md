@@ -29,10 +29,15 @@ and `_includes/`. Styles are in `assets/css/style.css`. Brand logos are in
 
 ```bash
 bundle install
-bundle exec jekyll serve
+./bin/serve
 ```
 
-Then open <http://localhost:4000>.
+Then open <http://localhost:4000>. Pages live-reload as you edit.
+
+`bin/serve` wraps `bundle exec jekyll serve` and preloads `bin/ruby4_compat.rb`,
+a tiny shim needed on Ruby 3.2+ because the `github-pages` gem pins an old
+Liquid that still calls the removed `String#tainted?`. The shim is local-only
+and has no effect on the GitHub Pages build.
 
 ## Deploying
 
