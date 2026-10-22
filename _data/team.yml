@@ -85,6 +85,11 @@ members:
     role: Assistant Professor
     department: Electrical and Software Engineering
     link: "https://profiles.ucalgary.ca/christine-cao"
+  - name: Arne Dankers
+    photo: /images/arne-dankers.jpg
+    role: Assistant Professor
+    department: Electrical and Software Engineering
+    link: "https://profiles.ucalgary.ca/arne-dankers"
   - name: Jackson Cone
     photo: /images/jackson-cone.jpg
     role: Assistant Professor
