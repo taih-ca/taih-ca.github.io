@@ -36,6 +36,7 @@ links:
 nav:
   - { name: About, url: "/#about" }
   - { name: Research, url: "/research/" }
+  - { name: Events, url: "/events/" }
   - { name: Members, url: "/members/" }
   - { name: News, url: "/#news" }
   - { name: Contact, url: "/#contact" }

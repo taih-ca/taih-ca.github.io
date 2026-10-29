@@ -354,3 +354,54 @@ a.person__avatar { text-decoration: none; color: #fff; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto; }
 }
+
+/* ===================== EVENTS PAGE ===================== */
+.event-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; max-width: 880px; }
+.event {
+  display: grid; grid-template-columns: 112px 1fr; gap: 22px; align-items: start;
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 22px 24px; box-shadow: var(--shadow-sm); transition: transform .2s ease, box-shadow .2s ease;
+}
+.event:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.event--tbd { background: var(--cream); }
+.event__date {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  font-family: var(--font-head); color: var(--crimson); border-right: 2px solid var(--line); padding-right: 18px;
+}
+.event__month { font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.event__day { font-size: 2.2rem; font-weight: 700; line-height: 1.05; color: var(--ink); }
+.event__weekday { font-size: .78rem; font-weight: 600; color: var(--muted); margin-top: 4px; }
+.event__series {
+  display: inline-block; font-size: .76rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--orange-dk); background: rgba(238,119,6,.1); padding: .3em .7em; border-radius: 999px; margin-bottom: 10px;
+}
+.event__series:hover { background: rgba(238,119,6,.18); color: var(--orange-dk); }
+.event__title { font-size: 1.22rem; font-weight: 600; margin: 0 0 12px; color: var(--ink); line-height: 1.35; }
+.event--tbd .event__title { color: var(--ink-soft); font-weight: 500; }
+.event__meta, .series__facts { margin: 0; display: grid; gap: 6px 20px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.event__meta div, .series__facts div { display: grid; grid-template-columns: 84px 1fr; gap: 8px; font-size: .95rem; }
+.event__meta dt, .series__facts dt { font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.event__meta dd, .series__facts dd { margin: 0; color: var(--ink-soft); }
+.series__facts { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); grid-template-columns: 1fr; }
+.event__abstract { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 12px; }
+.event__abstract summary { cursor: pointer; font-weight: 600; color: var(--crimson); list-style: none; display: inline-flex; align-items: center; gap: .4em; }
+.event__abstract summary::-webkit-details-marker { display: none; }
+.event__abstract summary::before { content: ""; width: .5em; height: .5em; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); transition: transform .2s ease; }
+.event__abstract[open] summary::before { transform: rotate(45deg); }
+.event__abstract summary:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; border-radius: 4px; }
+.event__abstract p { margin: 12px 0 0; color: var(--ink-soft); font-size: .98rem; text-align: justify; hyphens: auto; }
+.event-empty { color: var(--ink-soft); font-size: 1.05rem; }
+.past-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: 880px; }
+.past { display: grid; grid-template-columns: 160px 1fr; gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.past__date { font-family: var(--font-head); font-weight: 600; font-size: .95rem; color: var(--muted); padding-top: 2px; }
+.past__title { font-weight: 600; color: var(--ink); margin: 0 0 4px; font-size: 1.02rem; }
+.past__title a { color: var(--ink); }
+.past__title a:hover { color: var(--crimson); }
+.past__meta { margin: 0; color: var(--ink-soft); font-size: .92rem; }
+.events-more { margin: 32px 0 0; }
+@media (max-width: 720px) {
+  .event { grid-template-columns: 1fr; gap: 12px; }
+  .event__date { flex-direction: row; gap: 10px; align-items: baseline; border-right: 0; border-bottom: 2px solid var(--line); padding: 0 0 10px; }
+  .event__day { font-size: 1.6rem; }
+  .past { grid-template-columns: 1fr; gap: 4px; }
+}

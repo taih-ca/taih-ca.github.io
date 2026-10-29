@@ -1,0 +1,137 @@
+---
+layout: default
+title: Events
+permalink: /events/
+description: >-
+  Upcoming reading groups, talks, and lunch presentations from the
+  Transdisciplinary AI Hub (TAIH) at the University of Calgary, plus an
+  archive of past events.
+---
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <div class="page-hero__bg" aria-hidden="true">
+    <span class="shard shard--tan"></span>
+    <span class="shard shard--orange"></span>
+  </div>
+  <div class="container">
+    <p class="hero__eyebrow">Events</p>
+    <h1 class="page-hero__title">Events</h1>
+    <p class="page-hero__lead">
+      Reading groups, talks, and lunch presentations run by TAIH member labs.
+      Everyone at the University of Calgary is welcome, whatever your
+      background. Sessions are listed in Calgary time (Mountain Time).
+    </p>
+  </div>
+</section>
+
+{% assign now = site.time | date: "%s" | plus: 0 %}
+{% assign upcoming = "" | split: "" %}
+{% assign past_sessions = "" | split: "" %}
+{% for e in site.data.calendar.events %}
+  {% if e.date %}
+    {% assign end = e.date | date: "%s" | plus: 86400 %}
+  {% else %}
+    {% assign end = e.sort_date | date: "%s" | plus: 86400 %}
+  {% endif %}
+  {% if end > now %}
+    {% assign upcoming = upcoming | push: e %}
+  {% else %}
+    {% assign past_sessions = past_sessions | push: e %}
+  {% endif %}
+{% endfor %}
+
+<!-- ===================== UPCOMING ===================== -->
+<section class="section" id="upcoming">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Upcoming</h2>
+      <p class="section__sub">What's next on the calendar.</p>
+    </div>
+
+    {% if upcoming.size > 0 %}
+    <ol class="event-list">
+      {% for e in upcoming %}
+      {% assign s = site.data.calendar.series | where: "id", e.series | first %}
+      <li class="event{% if e.title contains 'to be announced' %} event--tbd{% endif %}">
+        <div class="event__date">
+          {% if e.date %}
+          <span class="event__month">{{ e.date | date: "%b" }}</span>
+          <span class="event__day">{{ e.date | date: "%-d" }}</span>
+          <span class="event__weekday">{{ e.date | date: "%A" }}</span>
+          {% else %}
+          <span class="event__month">{{ e.date_text }}</span>
+          <span class="event__weekday">Date TBC</span>
+          {% endif %}
+        </div>
+        <div class="event__body">
+          {% if s %}<a class="event__series" href="#series-{{ s.id }}">{{ s.title }}</a>{% endif %}
+          <h3 class="event__title">{{ e.title }}</h3>
+          <dl class="event__meta">
+            {% if e.time %}<div><dt>When</dt><dd>{{ e.time }}</dd></div>{% endif %}
+            {% if e.location %}<div><dt>Where</dt><dd>{{ e.location }}</dd></div>{% endif %}
+            {% if e.presenter %}<div><dt>Speaker</dt><dd>{{ e.presenter }}</dd></div>{% endif %}
+            {% if s %}<div><dt>Organizer</dt><dd>{{ s.organizer }}</dd></div>{% endif %}
+          </dl>
+          {% if e.abstract %}
+          <details class="event__abstract">
+            <summary>About this talk</summary>
+            <p>{{ e.abstract }}</p>
+          </details>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <p class="event-empty">No sessions are scheduled right now. Check back soon, or follow a series below.</p>
+    {% endif %}
+  </div>
+</section>
+
+<!-- ===================== SERIES ===================== -->
+<section class="section section--alt" id="series">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Recurring series</h2>
+      <p class="section__sub">Regular gatherings hosted by TAIH member labs.</p>
+    </div>
+    <div class="grid grid--events">
+      {% for s in site.data.calendar.series %}
+      <article class="card card--event" id="series-{{ s.id }}">
+        <div class="card__meta">{{ s.format }}</div>
+        <h3 class="card__title">{{ s.title }}</h3>
+        <p class="card__body">{{ s.description }}</p>
+        <dl class="series__facts">
+          <div><dt>Organizer</dt><dd>{{ s.organizer }}</dd></div>
+          <div><dt>Cadence</dt><dd>{{ s.cadence }}</dd></div>
+          <div><dt>Where</dt><dd>{{ s.location }}</dd></div>
+        </dl>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PAST ===================== -->
+<section class="section" id="past">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Past events</h2>
+    </div>
+    <ul class="past-list">
+      {% assign past_all = site.data.calendar.past | concat: past_sessions | sort: "date" | reverse %}
+      {% for p in past_all %}
+      {% if p.series %}{% assign s = site.data.calendar.series | where: "id", p.series | first %}{% else %}{% assign s = nil %}{% endif %}
+      <li class="past">
+        <span class="past__date">{{ p.date | date: "%B %-d, %Y" }}</span>
+        <div>
+          <p class="past__title">{% if p.url %}<a href="{{ p.url | relative_url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
+          {% if s %}<p class="past__meta">{{ s.title }}{% if p.presenter %} · {{ p.presenter }}{% endif %}</p>{% endif %}
+          {% if p.summary %}<p class="past__meta">{{ p.summary }}</p>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

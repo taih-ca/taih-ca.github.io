@@ -1,0 +1,89 @@
+# Events calendar for /events/
+# - series: recurring activities (shown as cards)
+# - events: dated sessions; anything whose date has passed moves to "Past" automatically at build time
+# - past: one-off past events that are not sessions of a series
+
+series:
+  - id: fundamental-ai
+    title: Fundamental AI Reading Group
+    organizer: "Prof. Kahou's lab"
+    format: Hybrid
+    cadence: "Biweekly on Mondays, 11 am – noon"
+    location: "ENGA 306 and Zoom"
+    description: >-
+      Short presentations on core ideas and key papers in machine learning,
+      followed by open discussion. All backgrounds welcome.
+
+  - id: ai-energy
+    title: AI in Energy Lunch Presentation
+    organizer: "Prof. Farrokhabadi's lab"
+    format: Monthly
+    cadence: "Monthly over lunch"
+    location: "To be announced"
+    description: >-
+      Monthly lunch talks on AI for power and energy systems, from forecasting
+      and grid operations to planning and markets.
+
+  - id: agentic-ai
+    title: Agentic AI Reading Group
+    organizer: "Prof. Drew's lab"
+    format: Reading group
+    cadence: "Schedule to be announced"
+    location: "To be announced"
+    description: >-
+      Discussion of recent work on LLM agents, tool use, multi-agent systems,
+      and the infrastructure that supports them.
+
+  - id: ai-health
+    title: AI in Health Reading Group
+    organizer: "Prof. Boursalie's lab"
+    format: Reading group
+    cadence: "Schedule to be announced"
+    location: "To be announced"
+    description: >-
+      Papers and case studies at the intersection of machine learning and
+      health, from clinical data to medical imaging.
+
+events:
+  - series: fundamental-ai
+    date: 2026-11-10
+    time: "11 am – noon"
+    title: An overview of shielded reinforcement learning
+    presenter: "Nils Kiele, second-year PhD student, MIRL lab"
+    location: "Hybrid: ENGA 306 and Zoom"
+    abstract: >-
+      Reinforcement learning agents learn by trial and error, which is a problem
+      when some errors are unacceptable. Shielding is a family of methods that
+      sits between a learning agent and its environment and blocks actions that
+      would violate a formally specified safety property, during both training
+      and deployment. Since its introduction in 2018, shielding has grown from a
+      grid-world technique with absolute guarantees into a broader toolkit
+      covering probabilistic risk, partial observability, multi-agent systems,
+      continuous control, and offline or model-free settings. This talk
+      introduces the core idea and key papers of shielded reinforcement
+      learning. No matter your background, you are welcome to join this
+      30-minute presentation, followed by 30 minutes of Q&A and open discussion.
+
+  - series: fundamental-ai
+    date: 2026-11-24
+    time: "11 am – noon"
+    title: Topic to be announced
+    location: "Hybrid: ENGA 306 and Zoom"
+
+  - series: fundamental-ai
+    date: 2026-12-08
+    time: "11 am – noon"
+    title: Topic to be announced
+    location: "Hybrid: ENGA 306 and Zoom"
+
+  - series: ai-energy
+    date_text: "November 2026"
+    sort_date: 2026-11-30
+    title: Date and topic to be announced
+    location: "To be announced"
+
+past:
+  - date: 2026-05-26
+    title: Inaugural TAIH Symposium
+    summary: "A full day of invited talks, oral sessions, and posters on trustworthy, transparent, and accountable AI."
+    url: /news/annual-symposium/
