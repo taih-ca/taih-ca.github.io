@@ -150,14 +150,26 @@ layout: default
 <section class="section section--alt" id="sponsors">
   <div class="container">
     <div class="section__head">
-      <h2 class="section__title">Sponsors</h2>
+      <h2 class="section__title">Sponsors &amp; partners</h2>
+      <p class="section__sub">Organizations that fund and collaborate with the Hub.</p>
     </div>
-    <div class="sponsors">
-      {% for sponsor in site.data.sponsors %}
-      <div class="sponsor">
-        <span class="sponsor__name">{{ sponsor.name }}</span>
-        <span class="sponsor__aff">{{ sponsor.affiliation }}</span>
-      </div>
+    <div class="grid grid--partners">
+      {% for s in site.data.sponsors %}
+      {% assign label = s.full_name | default: s.name %}
+      <article class="card card--partner">
+        <div class="partner__mark">
+          {% if s.logo %}
+          <img class="partner__logo" src="{{ s.logo | relative_url }}" alt="{{ label }}">
+          {% else %}
+          <span class="partner__wordmark">{{ s.name }}</span>
+          {% endif %}
+        </div>
+        <div class="partner__body">
+          <span class="card__meta">{{ s.type }}</span>
+          {% if s.logo %}<h3 class="partner__name">{% if s.link != "" %}<a href="{{ s.link }}" target="_blank" rel="noopener">{{ label }} ↗</a>{% else %}{{ label }}{% endif %}</h3>{% elsif s.link != "" %}<p class="partner__name"><a href="{{ s.link }}" target="_blank" rel="noopener">Visit website ↗</a></p>{% endif %}
+          {% if s.affiliation %}<p class="partner__aff">{{ s.affiliation }}</p>{% endif %}
+        </div>
+      </article>
       {% endfor %}
     </div>
     <p class="sponsors__cta">

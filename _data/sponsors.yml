@@ -1,4 +1,14 @@
-# Sponsors & supporting partners
+# Sponsors & partners, shown as one grid of uniform cards on the home page.
+# type: Sponsor | Partner.  logo is optional; without it the name is shown as a wordmark.
 - name: Schulich Momentum Funds
+  type: Sponsor
   affiliation: Schulich School of Engineering, University of Calgary
-  link: ""
+  logo: /assets/img/schulich-logo.svg
+  link: "https://schulich.ucalgary.ca/about/schulich-momentum"
+
+- name: TESS
+  full_name: Transdisciplinary Engineering & Science for Sustainability
+  type: Partner
+  affiliation: NSERC CREATE program, University of Calgary
+  logo: /assets/img/tess-logo.png
+  link: "https://nserc-create-tess.ca/"
