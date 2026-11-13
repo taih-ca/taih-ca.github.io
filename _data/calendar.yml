@@ -49,7 +49,8 @@ events:
     date: 2026-11-10
     time: "11 am – noon"
     title: An overview of shielded reinforcement learning
-    presenter: "Nils Kiele, second-year PhD student, MIRL lab"
+    presenter: "Nils Kiele"
+    presenter_title: "2nd-year PhD student, MIRL Lab"
     location: "Hybrid: ENGA 306 and Zoom"
     abstract: >-
       Reinforcement learning agents learn by trial and error, which is a problem
@@ -68,7 +69,9 @@ events:
     date: 2026-11-25
     time: "2 pm – 3 pm"
     title: Structural Rationale Distillation via Reasoning Space Compression
-    presenter: "Jialin Yang, PhD student"
+    presenter: "Jialin Yang"
+    presenter_title: "2nd-year PhD student, Denos Lab"
+    presenter_url: "https://denoslab.com/team/jialin-yang/"
     location: "Hybrid: ICT 516 and Zoom"
     abstract: >-
       When a large language model teaches a smaller one to reason, its
@@ -76,7 +79,7 @@ events:
       hard for the student to learn from. This talk shows how having the
       teacher follow a small bank of reusable reasoning paths makes its
       rationales more consistent and improves distillation performance.
-      Join in person in ICT 516 or online via Zoom; the link is shared on
+      Join in person in ICT 516 or online via Zoom. The link is shared on
       Slack and by email.
 
   - series: fundamental-ai

@@ -394,7 +394,9 @@ a.person__avatar { text-decoration: none; color: #fff; }
 .event__meta div, .series__facts div { display: grid; grid-template-columns: 84px 1fr; gap: 8px; font-size: .95rem; }
 .event__meta dt, .series__facts dt { font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
 .event__meta dd, .series__facts dd { margin: 0; color: var(--ink-soft); }
-.series__facts { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); grid-template-columns: 1fr; }
+.series__facts { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); grid-template-columns: 1fr; gap: 10px; }
+.series__facts div { grid-template-columns: 1fr; gap: 2px; }
+.series__facts dt { padding-top: 0; }
 .event__abstract { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 12px; }
 .event__abstract summary { cursor: pointer; font-weight: 600; color: var(--crimson); list-style: none; display: inline-flex; align-items: center; gap: .4em; }
 .event__abstract summary::-webkit-details-marker { display: none; }
