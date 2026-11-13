@@ -29,7 +29,7 @@ series:
     organizer: "Prof. Drew's lab"
     format: Reading group
     cadence: "Schedule to be announced"
-    location: "To be announced"
+    location: "ICT 516 and Zoom"
     description: >-
       Discussion of recent work on LLM agents, tool use, multi-agent systems,
       and the infrastructure that supports them.
@@ -64,11 +64,20 @@ events:
       learning. No matter your background, you are welcome to join this
       30-minute presentation, followed by 30 minutes of Q&A and open discussion.
 
-  - series: fundamental-ai
-    date: 2026-11-24
-    time: "11 am – noon"
-    title: Topic to be announced
-    location: "Hybrid: ENGA 306 and Zoom"
+  - series: agentic-ai
+    date: 2026-11-25
+    time: "2 pm – 3 pm"
+    title: Structural Rationale Distillation via Reasoning Space Compression
+    presenter: "Jialin Yang, PhD student"
+    location: "Hybrid: ICT 516 and Zoom"
+    abstract: >-
+      When a large language model teaches a smaller one to reason, its
+      explanations for similar problems often vary widely, which makes them
+      hard for the student to learn from. This talk shows how having the
+      teacher follow a small bank of reusable reasoning paths makes its
+      rationales more consistent and improves distillation performance.
+      Join in person in ICT 516 or online via Zoom; the link is shared on
+      Slack and by email.
 
   - series: fundamental-ai
     date: 2026-12-08
